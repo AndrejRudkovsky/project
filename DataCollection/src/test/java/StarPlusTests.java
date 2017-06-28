@@ -116,9 +116,10 @@ public class StarPlusTests extends WebDriverTestBase {
 
         //Вместо этого можно создать файл и отправить полученные результаты письмом
         System.out.print("кол-во закупок по 44фз на площадке S2: " + rts44_count + " кол-во закупок по 44фз на b2b S1: " + b2b_count + " S2-S1: " + (rts44_count - b2b_count) + "\r\n");
-        FileWriter writer = new FileWriter("C:\\SomeDir\\notes3.txt", false);
+        FileWriter writer = new FileWriter("src/test_results/notes3.txt", false);
         {
             // запись всей строки
+            String text_ ="\r\n_______________________________________________________________________________________________\r\n"
             String text3 = "Кол-во закупок по 44фз на площадке S2: " + rts44_count + " \nКол-во закупок по 44фз на b2b S1: " + b2b_count + "\nS2-S1: " + (rts44_count - b2b_count) + "\r\n";
             writer.write(text3);
             // запись по символам
